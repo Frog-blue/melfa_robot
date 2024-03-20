@@ -27,7 +27,8 @@ MelfaHW::MelfaHW (double period)
     exit(1);
   }
   // set IP and port
-  ros::param::param<std::string>("~robot_ip", robot_ip_, "127.0.0.1");
+  // ros::param::param<std::string>("~robot_ip", robot_ip_, "127.0.0.1");
+  ros::param::param<std::string>("~robot_ip", robot_ip_, "192.168.100.1");
   // Usage of additional joints
   ros::param::param<bool>("~use_joint7", use_joint7_, false);
   ros::param::param<bool>("~use_joint8", use_joint8_, false);

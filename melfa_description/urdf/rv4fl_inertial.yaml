@@ -1,0 +1,125 @@
+link_0_mass: 1 #TODO change mass properties
+link_0_inertia:
+  ixx: 0.01
+  ixy: 0
+  ixz: 0
+  iyy: 0.01
+  iyz: 0
+  izz: 0.01
+
+link_1_mass: 1 #TODO change mass properties
+link_1_inertia:
+  ixx: 0.01
+  ixy: 0
+  ixz: 0
+  iyy: 0.01
+  iyz: 0
+  izz: 0.01
+
+link_2_mass: 1 #TODO change mass properties
+link_2_inertia:
+  ixx: 0.001
+  ixy: 0
+  ixz: 0
+  iyy: 0.001
+  iyz: 0
+  izz: 0.001
+
+link_3_mass: 1 #TODO change mass properties
+link_3_inertia:
+  ixx: 0.001
+  ixy: 0
+  ixz: 0
+  iyy: 0.001
+  iyz: 0
+  izz: 0.001
+
+link_4_mass: 1 #TODO change mass properties
+link_4_inertia:
+  ixx: 0.001
+  ixy: 0
+  ixz: 0
+  iyy: 0.001
+  iyz: 0
+  izz: 0.001
+
+link_5_mass: 1 #TODO change mass properties
+link_5_inertia: #TODO check inertia beacuse its sus to have zero
+  ixx: 0.001
+  ixy: 0
+  ixz: 0
+  iyy: 0.001
+  iyz: 0
+  izz: 0.001
+link_6_mass: 1 #TODO change mass properties
+link_6_inertia: #TODO check inertia beacuse its sus to have zero
+  ixx: 0.001
+  ixy: 0
+  ixz: 0
+  iyy: 0.001
+  iyz: 0
+  izz: 0.001
+
+
+# link_0_mass: 1 #TODO change mass properties
+# link_0_inertia:
+#   ixx: 0.000035
+#   ixy: 0
+#   ixz: -0.000004
+#   iyy: 0.000052
+#   iyz: 0
+#   izz: 0.000049
+
+# link_1_mass: 1 #TODO change mass properties
+# link_1_inertia:
+#   ixx: 0.000034
+#   ixy: 0
+#   ixz: 0.000001
+#   iyy: 0.000025
+#   iyz: 0
+#   izz: 0.000025
+
+# link_2_mass: 1 #TODO change mass properties
+# link_2_inertia:
+#   ixx: 0.000069
+#   ixy: 0
+#   ixz: -0.000003
+#   iyy: 0.000064
+#   iyz: 0
+#   izz: 0.000018
+
+# link_3_mass: 1 #TODO change mass properties
+# link_3_inertia:
+#   ixx: 0.000006
+#   ixy: 0
+#   ixz: 0
+#   iyy: 0.000007
+#   iyz: 0
+#   izz: 0.000006
+
+# link_4_mass: 1 #TODO change mass properties
+# link_4_inertia:
+#   ixx: 0.000019
+#   ixy: 0
+#   ixz: 0.0
+#   iyy: 0.000017
+#   iyz: 0
+#   izz: 0.000004
+
+# link_5_mass: 1 #TODO change mass properties
+# link_5_inertia: #TODO check inertia beacuse its sus to have zero
+#   ixx: 0.000001
+#   ixy: 0
+#   ixz: 0.0
+#   iyy: 0.000001
+#   iyz: 0
+#   izz: 0.000001
+
+# link_6_mass: 1 #TODO change mass properties
+# link_6_inertia: #TODO check inertia beacuse its sus to have zero
+#   ixx: 0.000001
+#   ixy: 0
+#   ixz: 0.0
+#   iyy: 0.000001
+#   iyz: 0
+#   izz: 0.000001

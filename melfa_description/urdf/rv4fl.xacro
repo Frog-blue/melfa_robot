@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <!-- Copyright (C) 2018, Tokyo Opensource Robotics Kyokai Association -->
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:property name="inertial" value="${xacro.load_yaml('rv4fl_inertial.yaml')}" />
 
   <xacro:macro name="rv4fl" params="parent *origin">
     <joint name="rv4fl_mounting_joint" type="fixed">
@@ -11,18 +12,25 @@
 
     <link name="link0">
       <visual>
-	<origin rpy="0 0 ${pi}" xyz="0 0 0"/>
-	<geometry>
-	  <mesh filename="package://melfa_description/mesh/rv4fl/L0.stl"/>
-	</geometry>
-	<material name="white"/>
+        <origin rpy="0 0 ${pi}" xyz="0 0 0"/>
+        <geometry>
+          <mesh filename="package://melfa_description/mesh/rv4fl/L0.stl"/>
+        </geometry>
+        <material name="white"/>
       </visual>
       <collision>
-	<origin rpy="0 0 ${pi}" xyz="0 0 0"/>
-	<geometry>
-	  <mesh filename="package://melfa_description/mesh/rv4fl/L0.stl"/>
-	</geometry>
+        <origin rpy="0 0 ${pi}" xyz="0 0 0"/>
+        <geometry>
+          <mesh filename="package://melfa_description/mesh/rv4fl/L0.stl"/>
+        </geometry>
       </collision>
+      <inertial>
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+        <mass value="${inertial['link_0_mass']}"/>
+        <inertia ixx="${inertial['link_0_inertia']['ixx']}" ixy="${inertial['link_0_inertia']['ixy']}" ixz="${inertial['link_0_inertia']['ixz']}"
+            iyy="${inertial['link_0_inertia']['iyy']}" iyz="${inertial['link_0_inertia']['iyz']}"
+            izz="${inertial['link_0_inertia']['izz']}"/>
+      </inertial>
     </link>
 
     <joint name="joint1" type="revolute">
@@ -36,18 +44,25 @@
 
     <link name="link1">
       <visual>
-	<origin rpy="0 0 0" xyz="0 0 -0.350"/>
-	<geometry>
-	  <mesh filename="package://melfa_description/mesh/rv4fl/L1.stl"/>
-	</geometry>
-	<material name="white"/>
+        <origin rpy="0 0 0" xyz="0 0 -0.350"/>
+        <geometry>
+          <mesh filename="package://melfa_description/mesh/rv4fl/L1.stl"/>
+        </geometry>
+        <material name="white"/>
       </visual>
       <collision>
-	<origin rpy="0 0 0" xyz="0 0 -0.350"/>
-	<geometry>
-	  <mesh filename="package://melfa_description/mesh/rv4fl/L1.stl"/>
-	</geometry>
+        <origin rpy="0 0 0" xyz="0 0 -0.350"/>
+        <geometry>
+          <mesh filename="package://melfa_description/mesh/rv4fl/L1.stl"/>
+        </geometry>
       </collision>
+      <inertial>
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+        <mass value="${inertial['link_1_mass']}"/>
+        <inertia ixx="${inertial['link_1_inertia']['ixx']}" ixy="${inertial['link_1_inertia']['ixy']}" ixz="${inertial['link_1_inertia']['ixz']}"
+            iyy="${inertial['link_1_inertia']['iyy']}" iyz="${inertial['link_1_inertia']['iyz']}"
+            izz="${inertial['link_1_inertia']['izz']}"/>
+      </inertial>
     </link>
 
     <joint name="joint2" type="revolute">
@@ -61,18 +76,25 @@
 
     <link name="link2">
       <visual>
-	<origin rpy="0 0 ${pi}" xyz="0 0 -0.350"/>
-	<geometry>
-	  <mesh filename="package://melfa_description/mesh/rv4fl/L2.stl"/>
-	</geometry>
-	<material name="white"/>
+        <origin rpy="0 0 ${pi}" xyz="0 0 -0.350"/>
+        <geometry>
+          <mesh filename="package://melfa_description/mesh/rv4fl/L2.stl"/>
+        </geometry>
+        <material name="white"/>
       </visual>
       <collision>
-	<origin rpy="0 0 ${pi}" xyz="0 0 -0.350"/>
-	<geometry>
-	  <mesh filename="package://melfa_description/mesh/rv4fl/L2.stl"/>
-	</geometry>
+        <origin rpy="0 0 ${pi}" xyz="0 0 -0.350"/>
+        <geometry>
+          <mesh filename="package://melfa_description/mesh/rv4fl/L2.stl"/>
+        </geometry>
       </collision>
+      <inertial>
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+        <mass value="${inertial['link_2_mass']}"/>
+        <inertia ixx="${inertial['link_2_inertia']['ixx']}" ixy="${inertial['link_2_inertia']['ixy']}" ixz="${inertial['link_2_inertia']['ixz']}"
+            iyy="${inertial['link_2_inertia']['iyy']}" iyz="${inertial['link_2_inertia']['iyz']}"
+            izz="${inertial['link_2_inertia']['izz']}"/>
+      </inertial>
     </link>
 
     <joint name="joint3" type="revolute">
@@ -86,18 +108,25 @@
 
     <link name="link3">
       <visual>
-	<origin rpy="0 0 ${pi}" xyz="0 0 ${-0.350-0.310}"/>
-	<geometry>
-	  <mesh filename="package://melfa_description/mesh/rv4fl/L3.stl"/>
-	</geometry>
-	<material name="white"/>
+        <origin rpy="0 0 ${pi}" xyz="0 0 ${-0.350-0.310}"/>
+        <geometry>
+          <mesh filename="package://melfa_description/mesh/rv4fl/L3.stl"/>
+        </geometry>
+        <material name="white"/>
       </visual>
       <collision>
-	<origin rpy="0 0 ${pi}" xyz="0 0 ${-0.350-0.310}"/>
-	<geometry>
-	  <mesh filename="package://melfa_description/mesh/rv4fl/L3.stl"/>
-	</geometry>
+        <origin rpy="0 0 ${pi}" xyz="0 0 ${-0.350-0.310}"/>
+        <geometry>
+          <mesh filename="package://melfa_description/mesh/rv4fl/L3.stl"/>
+        </geometry>
       </collision>
+      <inertial>
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+        <mass value="${inertial['link_3_mass']}"/>
+        <inertia ixx="${inertial['link_3_inertia']['ixx']}" ixy="${inertial['link_3_inertia']['ixy']}" ixz="${inertial['link_3_inertia']['ixz']}"
+            iyy="${inertial['link_3_inertia']['iyy']}" iyz="${inertial['link_3_inertia']['iyz']}"
+            izz="${inertial['link_3_inertia']['izz']}"/>
+      </inertial>
     </link>
 
     <joint name="joint4" type="revolute">
@@ -111,18 +140,25 @@
 
     <link name="link4">
       <visual>
-	<origin rpy="0 0 0" xyz="-0.050 0 ${-0.350-0.310-0.335}"/>
-	<geometry>
-	  <mesh filename="package://melfa_description/mesh/rv4fl/L4.stl"/>
-	</geometry>
-	<material name="white"/>
+        <origin rpy="0 0 0" xyz="-0.050 0 ${-0.350-0.310-0.335}"/>
+        <geometry>
+          <mesh filename="package://melfa_description/mesh/rv4fl/L4.stl"/>
+        </geometry>
+        <material name="white"/>
       </visual>
       <collision>
-	<origin rpy="0 0 0" xyz="-0.050 0 ${-0.350-0.310-0.335}"/>
-	<geometry>
-	  <mesh filename="package://melfa_description/mesh/rv4fl/L4.stl"/>
-	</geometry>
+        <origin rpy="0 0 0" xyz="-0.050 0 ${-0.350-0.310-0.335}"/>
+        <geometry>
+          <mesh filename="package://melfa_description/mesh/rv4fl/L4.stl"/>
+        </geometry>
       </collision>
+      <inertial>
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+        <mass value="${inertial['link_4_mass']}"/>
+        <inertia ixx="${inertial['link_4_inertia']['ixx']}" ixy="${inertial['link_4_inertia']['ixy']}" ixz="${inertial['link_4_inertia']['ixz']}"
+            iyy="${inertial['link_4_inertia']['iyy']}" iyz="${inertial['link_4_inertia']['iyz']}"
+            izz="${inertial['link_4_inertia']['izz']}"/>
+      </inertial>
     </link>
 
     <joint name="joint5" type="revolute">
@@ -136,18 +172,25 @@
 
     <link name="link5">
       <visual>
-	<origin rpy="0 0 0" xyz="-0.050 0 ${-0.350-0.310-0.335}"/>
-	<geometry>
-	  <mesh filename="package://melfa_description/mesh/rv4fl/L5.stl"/>
-	</geometry>
-	<material name="white"/>
+        <origin rpy="0 0 0" xyz="-0.050 0 ${-0.350-0.310-0.335}"/>
+        <geometry>
+          <mesh filename="package://melfa_description/mesh/rv4fl/L5.stl"/>
+        </geometry>
+        <material name="white"/>
       </visual>
       <collision>
-	<origin rpy="0 0 0" xyz="-0.050 0 ${-0.350-0.310-0.335}"/>
-	<geometry>
-	  <mesh filename="package://melfa_description/mesh/rv4fl/L5.stl"/>
-	</geometry>
+        <origin rpy="0 0 0" xyz="-0.050 0 ${-0.350-0.310-0.335}"/>
+        <geometry>
+          <mesh filename="package://melfa_description/mesh/rv4fl/L5.stl"/>
+        </geometry>
       </collision>
+      <inertial>
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+        <mass value="${inertial['link_5_mass']}"/>
+        <inertia ixx="${inertial['link_5_inertia']['ixx']}" ixy="${inertial['link_5_inertia']['ixy']}" ixz="${inertial['link_5_inertia']['ixz']}"
+            iyy="${inertial['link_5_inertia']['iyy']}" iyz="${inertial['link_5_inertia']['iyz']}"
+            izz="${inertial['link_5_inertia']['izz']}"/>
+      </inertial>
     </link>
 
     <joint name="joint6" type="revolute">
@@ -161,18 +204,25 @@
 
     <link name="link6">
       <visual>
-	<origin rpy="0 0 0" xyz="-0.050 0 ${-0.350-0.310-0.335-0.125}"/>
-	<geometry>
-	  <mesh filename="package://melfa_description/mesh/rv4fl/L6.stl"/>
-	</geometry>
-	<material name="white"/>
+        <origin rpy="0 0 0" xyz="-0.050 0 ${-0.350-0.310-0.335-0.125}"/>
+        <geometry>
+          <mesh filename="package://melfa_description/mesh/rv4fl/L6.stl"/>
+        </geometry>
+        <material name="white"/>
       </visual>
       <collision>
-	<origin rpy="0 0 0" xyz="-0.050 0 ${-0.350-0.310-0.335-0.125}"/>
-	<geometry>
-	  <mesh filename="package://melfa_description/mesh/rv4fl/L6.stl"/>
-	</geometry>
+        <origin rpy="0 0 0" xyz="-0.050 0 ${-0.350-0.310-0.335-0.125}"/>
+        <geometry>
+          <mesh filename="package://melfa_description/mesh/rv4fl/L6.stl"/>
+        </geometry>
       </collision>
+      <inertial>
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+        <mass value="${inertial['link_6_mass']}"/>
+        <inertia ixx="${inertial['link_6_inertia']['ixx']}" ixy="${inertial['link_6_inertia']['ixy']}" ixz="${inertial['link_6_inertia']['ixz']}"
+            iyy="${inertial['link_6_inertia']['iyy']}" iyz="${inertial['link_6_inertia']['iyz']}"
+            izz="${inertial['link_6_inertia']['izz']}"/>
+      </inertial>
     </link>
   </xacro:macro>
 </robot>

@@ -13,4 +13,10 @@
     <origin xyz="0 0 0" rpy="0 0 0"/>
   </xacro:rv4fl>
 
+  <xacro:include filename="rv4fl_gazebo.xacro"/>
+  <xacro:rv4fl_gazebo arm_id="first"/>
+
+  <xacro:include filename="rv4fl_control.xacro"/>
+  <xacro:rv4fl_control arm_id="first"/>
+
 </robot>

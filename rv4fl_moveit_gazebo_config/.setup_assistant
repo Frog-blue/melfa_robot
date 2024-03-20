@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: melfa_description
+    relative_path: urdf/rv4fl.urdf.xacro
+    xacro_args: ""
+  SRDF:
+    relative_path: config/rv4fl.srdf
+  CONFIG:
+    author_name: Bartosz Niedzielski
+    author_email: niedziep@gmail.com
+    generated_timestamp: 1709811353
